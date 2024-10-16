@@ -1,2 +1,12 @@
 # Billboard-Number-1-Hits
-Predicting whether a song will top the Billboard hot 100 charts or not
+Predicting whether a song will top the Billboard hot 100 charts or not.
+
+
+OBJECTIVE, METHODS, AND METRICS
+
+The objective of this project is to use historical song data to predict whether a song will be a hit. Additionally, it seeks to identify what characteristics of a song are most important in relation to whether it becomes a hit or not. Use of Spotify’s API “Get Track’s Audio Features”: https://developer.spotify.com/documentation/web-api/reference/get-audio-features. The features from this API are used to predict if a song is a hit or a flop.
+Machine learning models were employed to use the historical data from Spotify to predict if a song will become a hit. Supervised learning was utilized to split the data into training and test sets. An 80/20 split was used respectively for training and then testing. Other splits were also tested but were found not to be as accurate as the 80/20 split. Multiple models were used in the code, however, the most accurate were XGBoost, Random Forest, and KKN. A Logistic Regression model was also tried, but it did not have great accuracy. After much testing, final models were chosen that would best aid in quantifying results. 
+To evaluate the results, the score function is used to get an accuracy score for the models. This explains how well the model performs in its predictions for the test set, based on the training set and the training of the model. The test set has data on whether a song was actually a hit or flop; the model’s predictions can be compared to those target answers to see how it is performing. Further accuracy testing will be performed with songs that are not in the dataset. Those songs’ Spotify characteristics will be applied to the model to see if it can correctly determine if it is a hit or flop. 
+Another metric used to evaluate the models was the classification report which used the following metrics: precision, recall, F1-score, and support. Precision is the ratio of true positives (when a model makes a correct prediction) to the total number of positive predictions. This metric demonstrates the ability of a model to identify only the relevant data points. Recall is the ratio of true positives to the total number of actual positive cases and this metric demonstrates the ability of a model to find all the relevant cases in the entire data set. F1-score is the harmonic mean of both precision and recall and support is simply the number of samples in each class. The final metric, the confusion matrix, provides a way to visualize the results by showing the actual and predicted labels from the problem. 
+
+
